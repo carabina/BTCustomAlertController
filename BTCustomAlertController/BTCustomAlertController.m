@@ -7,7 +7,6 @@
 //
 
 #import "BTCustomAlertController.h"
-#import "UIColor+BinAdd.h"
 
 @implementation BTAction
 
