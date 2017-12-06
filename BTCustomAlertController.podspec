@@ -9,8 +9,12 @@ Pod::Spec.new do |s|
   s.author       = { "Rachael" => "bullettrain1433@gmail.com" }
   s.source       = { :git => "https://github.com/BulletTrain/BTCustomAlertController.git", :tag => s.version }
   s.source_files = "BTCustomAlertController/*.{h,m}"
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '8.0'
   s.frameworks   = 'UIKit'
   s.requires_arc = true
+  s.subspec "CommonElement" do |ss|
+    ss.dependency "CommonElement"
+    ss.xcconfig = { "FRAMEWORK_SEARCH_PATHS" => "$(PODS_ROOT)/CommonElement"}
+  end
 
 end
